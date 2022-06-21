@@ -48,10 +48,12 @@ export class WebviewManager {
         );
         WebviewManager.panelMap.set(command.id, panel);
 
-
         var state: State | undefined = context.globalState.get("state")
         if (!state) {
-            state = {}
+            state = {
+                "generateInfo": {},
+                "projectTemplates": []
+            }
             context.globalState.update("state", state);
         }
         if (command.id == 'crud.codeGenerate') {

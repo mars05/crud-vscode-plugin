@@ -1,7 +1,7 @@
 <template>
     <div class="app-container" style="width:600px;margin-left: auto;margin-right: auto;">
         <div>
-            <el-carousel height="500px" :key="carouselKey" ref="carousel" indicator-position="none" :autoplay="false"
+            <el-carousel height="350px" :key="carouselKey" ref="carousel" indicator-position="none" :autoplay="false"
                 :loop="false" arrow="never">
                 <el-carousel-item>
                     <MyTemplateStep :state="state" ref="myTemplateStep"></MyTemplateStep>
