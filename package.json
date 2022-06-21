@@ -1,0 +1,95 @@
+{
+	"name": "crud",
+	"displayName": "Crud",
+	"description": "一个用于代码生成的插件，可以根据数据库表结构，帮助您从不同的模板快速生成相关代码。支持项目生成和代码生成、自定义模板等功能。",
+	"repository": {
+		"url": "https://github.com/mars05/crud-vscode-plugin"
+	},
+	"author": {
+		"email": "xiaoyucoder@163.com",
+		"name": "Mars05",
+		"url": "https://github.com/mars05"
+	},
+	"icon": "docs/pluginIcon.png",
+	"publisher": "crud-hub",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.66.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:crud.templateImport",
+		"onCommand:crud.myTemplate",
+		"onCommand:crud.projectGenerate",
+		"onCommand:crud.codeGenerate"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"menus": {
+			"file/newFile": [
+				{
+					"command": "crud.projectGenerate",
+					"group": "Crud"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "crud.codeGenerate",
+					"group": "Crud"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "crud.templateImport",
+				"title": "模板导入",
+				"category": "Crud"
+			},
+			{
+				"command": "crud.myTemplate",
+				"title": "我的模板",
+				"category": "Crud"
+			},
+			{
+				"command": "crud.projectGenerate",
+				"title": "项目生成",
+				"category": "Crud"
+			},
+			{
+				"command": "crud.codeGenerate",
+				"title": "代码生成",
+				"category": "Crud"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "concurrently \"npm --prefix web run build\" \"webpack --watch\"",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "npm run compile-tests && npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.66.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.0",
+		"@types/node": "14.x",
+		"@typescript-eslint/eslint-plugin": "^5.16.0",
+		"@typescript-eslint/parser": "^5.16.0",
+		"eslint": "^8.11.0",
+		"glob": "^7.2.0",
+		"mocha": "^9.2.2",
+		"typescript": "^4.5.5",
+		"ts-loader": "^9.2.8",
+		"webpack": "^5.70.0",
+		"webpack-cli": "^4.9.2",
+		"@vscode/test-electron": "^2.1.3"
+	}
+}
