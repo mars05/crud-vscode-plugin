@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="height:100%; overflow: auto;">
         <h3 style="margin-left: 10px;">DDL(仅支持MySQL):</h3>
         <el-input type="textarea" resize="both" :autosize="{ minRows: 10 }" v-model="ddl" />
     </div>
