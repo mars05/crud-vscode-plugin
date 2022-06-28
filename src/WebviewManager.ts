@@ -2,7 +2,8 @@ import * as vscode from "vscode";
 import * as fs from 'fs';
 import * as path from 'path';
 import { ProjectService } from "./service/ProjectService";
-import { State } from "./State";
+import { State, STATE_VERSION } from "./State";
+import { DEFAULT_TEMPLATE_DATA } from "./template/DefaultTemplate";
 
 export interface WebviewCommand {
     id: string,
@@ -49,10 +50,11 @@ export class WebviewManager {
         WebviewManager.panelMap.set(command.id, panel);
 
         var state: State | undefined = context.globalState.get("state")
-        if (!state) {
+        if (!state || state.version != STATE_VERSION) {
             state = {
                 "generateInfo": {},
-                "projectTemplates": []
+                "projectTemplates": DEFAULT_TEMPLATE_DATA,
+                "version": STATE_VERSION
             }
             context.globalState.update("state", state);
         }

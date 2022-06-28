@@ -16,12 +16,14 @@
                 </el-form-item>
             </div>
             <el-form-item label="代码模板:">
-                <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">
-                    全选
-                </el-checkbox>
-                <el-checkbox-group v-model="form.nameList" @change="handleCheckedChange">
-                    <el-checkbox v-for="name in nameOptions" :label="name" :key="name">{{ name }}</el-checkbox>
-                </el-checkbox-group>
+                <div>
+                    <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">
+                        全选
+                    </el-checkbox>
+                    <el-checkbox-group v-model="form.nameList" @change="handleCheckedChange">
+                        <el-checkbox v-for="name in nameOptions" :label="name" :key="name">{{ name }}</el-checkbox>
+                    </el-checkbox-group>
+                </div>
             </el-form-item>
         </el-form>
     </div>
