@@ -4,7 +4,7 @@
 
 [![LICENSE](https://img.shields.io/github/license/mars05/crud-vscode-plugin)](https://raw.githubusercontent.com/mars05/crud-vscode-plugin/master/LICENSE)
 [![Plugin Version](https://img.shields.io/github/v/release/mars05/crud-vscode-plugin)](https://github.com/mars05/crud-vscode-plugin/releases)
-[![Plugin Downloads](https://img.shields.io/jetbrains/plugin/d/12440-crud)](https://plugins.jetbrains.com/plugin/12440)
+[![Plugin Downloads](https://img.shields.io/visual-studio-marketplace/d/crud-hub.crud)](https://marketplace.visualstudio.com/items?itemName=crud-hub.crud)
 [![GitHub Stars](https://img.shields.io/github/stars/mars05/crud-vscode-plugin?logo=github)](https://github.com/mars05/crud-vscode-plugin)
 
 一个用于**代码生成**的插件，可以根据数据库表结构，帮助您从不同的模板快速生成相关代码。支持项目生成和代码生成、自定义模板等功能。
