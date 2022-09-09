@@ -1,7 +1,7 @@
 export const DEFAULT_TEMPLATE_DATA: any = [
     {
         "id": "1493418924169879553",
-        "name": "Spring Boot",
+        "name": "Spring Boot With MybatisPlus",
         "description": "ORM框架采用MybatisPlus，数据库采用MySQL",
         "projectType": 2,
         "fileTemplateList": [
@@ -61,7 +61,7 @@ export const DEFAULT_TEMPLATE_DATA: any = [
             }
         ],
         "createTime": "2022-02-15 10:56:29",
-        "updateTime": "2022-06-13 10:35:44",
+        "updateTime": "2022-08-05 08:50:06",
         "createName": "admin",
         "organizationName": "public",
         "organizationId": "1493398775811387393",
